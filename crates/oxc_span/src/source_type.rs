@@ -14,17 +14,17 @@ use tsify::Tsify;
 #[cfg_attr(feature = "serialize", serde(rename_all = "camelCase"))]
 pub struct SourceType {
     /// JavaScript or TypeScript, default JavaScript
-    language: Language,
+    pub language: Language,
 
     /// Script or Module, default Module
-    module_kind: ModuleKind,
+    pub module_kind: ModuleKind,
 
     /// Support JSX for JavaScript and TypeScript? default without JSX
-    variant: LanguageVariant,
+    pub variant: LanguageVariant,
 
     /// Mark strict mode as always strict
     /// See <https://github.com/tc39/test262/blob/main/INTERPRETING.md#strict-mode>
-    always_strict: bool,
+    pub always_strict: bool,
 }
 
 /// JavaScript or TypeScript
